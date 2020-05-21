@@ -1,0 +1,30 @@
+.reviews {
+    position: relative;
+    &__item {
+        display: flex;
+        margin-top: 70px;
+    }
+    &__img {
+        width: 167px;
+    }
+    &__descr {
+        margin-left: 60px;
+        width: 640px;
+        font-size: 16px;
+        color: rgb(13, 13, 13);
+        line-height: 1.2;
+        font-weight: 500;
+        h3 {
+            font-size: 18px;
+            color: rgb(13, 13, 13);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        h4 {
+            font-size: 14px;
+            font-weight: 300;
+            color: rgb(100, 100, 100);
+            line-height: 1.2;
+        }
+    }
+}

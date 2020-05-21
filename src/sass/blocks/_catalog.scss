@@ -37,10 +37,12 @@
         }
     }
     &__content {
-        margin-top: 60px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: none;
+        &_active {
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
     &-item {
         width: 300px;
@@ -48,6 +50,7 @@
         border: 2px solid #e8e8e8;
         padding: 20px 20px 26px 20px;
         overflow: hidden;
+        margin: 5px;
         margin-bottom: 20px;
         &__img {
             display: block;
@@ -147,10 +150,10 @@
                 }
             }
         }
-        &_back {
+        &__back {
             position: absolute;
             bottom: 0;
-            left: 0;
+            left: 50%;
             transform: translateX(calc(-50% - 19px));
             display: block;
             color: $main-color;

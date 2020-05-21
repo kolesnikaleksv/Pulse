@@ -7,6 +7,12 @@
         .title {
             font-size: 25px;
         }
+        .catalog {
+            padding-bottom: 70px;
+            &__content {
+                justify-content: space-between;
+            }
+        }
     }
     
     .container {
@@ -43,6 +49,7 @@
             }
         }  
     }
+    
 }
 @media (max-width: 991px) {
     body {
@@ -52,6 +59,31 @@
         }
         .title {
             font-size: 20px;
+        }
+        .catalog {
+            padding-bottom: 50px;
+            &__content {
+                justify-content: center;
+            }
+            &-item {
+                width: 80%;
+                &__subtitle {
+                    font-size: 22px;
+                }
+                &__descr {
+                    font-size: 17px;
+                }
+                &__link {
+                    font-size: 17px;
+                }
+            }
+        }
+        .footer {
+            &__info {
+                padding: 10px;
+                width: 400px;
+                height: 220px;
+            }
         }
     }
     
@@ -141,6 +173,49 @@
         .title {
             &_left {
                 text-align: center;
+            }
+        }
+        .catalog {
+            &__tabs {
+                margin-top: 40px;
+            }
+            &__tab {
+                width: 150px;
+                height: 40px;
+                font-size: 14px;
+                line-height: 36px;
+            }
+        }
+        .reviews {
+            &__item {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            &__img {
+                width: 50%;
+                margin-bottom: 20px;
+                img {
+                    width: 100%;
+                }
+            }
+            &__descr {
+                margin-left: 0;
+                margin-top: 20px;
+
+                width: 70%;
+            }
+        }
+        .footer {
+            &__info {
+                width: 360px;
+                height: 200px;
+            }
+            &__social-item {
+                &:hover {
+                    width: 50px;
+                    height: 50px;
+                }
             }
         }
     }
@@ -234,6 +309,21 @@
         min-height: 300px;
         padding: 10px 10px 20px 10px;
         min-width: 300px;
+    }
+    body {
+        .catalog {
+            padding-bottom: 30px;
+            &__tabs {
+                flex-direction: column;
+            }
+            &__tab {
+                margin: 5px auto;
+                width: 220px;
+                height: 50px;
+                font-size: 18px;
+                line-height: 48px;
+            }
+        }
     }
     
     .container {
