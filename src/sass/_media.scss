@@ -324,6 +324,20 @@
                 line-height: 48px;
             }
         }
+        .modal {
+            padding: 40px 10px 10px 10px;
+            width: 322px;
+            &__close {
+                right: 12px;
+                line-height: 44px;
+            }
+
+        }
+        .button {
+            &_submit {
+                margin: 0 auto;
+            }
+        }
     }
     
     .container {
