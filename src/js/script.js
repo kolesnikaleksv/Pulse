@@ -65,11 +65,40 @@ $(document).ready(function(){
       });
     });
 
-    
+    // Validate
 
+    function validateForm (form) {
+      $(form).validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 2
+          },
+          phone: "required",
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        messages: {
+          name: {
+            required: "We need your email address to contact you",
+            minlength: jQuery.validator.format("At least {0} characters required!")
+          },
+          phone: "Please specify your name",
+          email: {
+            required: "We need your email address to contact you",
+            email: "Your email address must be in the format of name@domain.com"
+          }
+        }
+      });
+    };
 
+    validateForm('#order form');
+    validateForm('#consultation form');
+    validateForm('#consultation-form');
 
-
+    $('input[name=phone]').mask("+3 8(999) 999-99-99");
   });
 
 const slider = tns({
