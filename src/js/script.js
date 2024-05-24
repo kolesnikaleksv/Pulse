@@ -20,21 +20,21 @@ $(document).ready(function(){
         .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
 
-    // $('.catalog-item__link').each(function(i) {
-    //   $(this).on('click', function(e) {
-    //     e.preventDefault();
-    //     $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-    //     $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-    //   })
-    // });
+    $('.catalog-item__link').each(function(i) {
+      $(this).on('click', function(e) {
+        e.preventDefault();
+        $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+        $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+      })
+    });
 
-    // $('.catalog-item__back').each(function(i) {
-    //   $(this).on('click', function(e) {
-    //     e.preventDefault();
-    //     $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-    //     $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-    //   })
-    // });
+    $('.catalog-item__back').each(function(i) {
+      $(this).on('click', function(e) {
+        e.preventDefault();
+        $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+        $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+      })
+    });
 
     function toggleClass(item) {
       $(item).each(function(i) {
@@ -45,8 +45,8 @@ $(document).ready(function(){
         });
       });
     }
-    toggleClass('.catalog-item__link');
-    toggleClass('.catalog-item__back');
+    // toggleClass('.catalog-item__link');
+    // toggleClass('.catalog-item__back');
 
     // Modal
 
@@ -102,20 +102,30 @@ $(document).ready(function(){
 
       // Open server
 
+      // $('form').submit(function(e) {
+      //   e.preventDefault();
+      //   $.ajax({
+      //     type: "POST",
+      //     url: "mailer/smart.php",
+      //     data: $(this).serialize()
+      //   }).done(function() {
+      //     $(this).find("input").val("");
+      //     $('#consultation, #order').fadeOut();
+      //     $('.overlay, #thanks').fadeIn('slow');
+
+      //     $('form').trigger('reset')
+      //   });
+      //   return false;
+      // });
+
+      //Fake request
       $('form').submit(function(e) {
         e.preventDefault();
-        $.ajax({
-          type: "POST",
-          url: "mailer/smart.php",
-          data: $(this).serialize()
-        }).done(function() {
           $(this).find("input").val("");
           $('#consultation, #order').fadeOut();
           $('.overlay, #thanks').fadeIn('slow');
 
           $('form').trigger('reset')
-        });
-        return false;
       });
 
       // Smooth scroll and pageup
@@ -150,4 +160,3 @@ const slider = tns({
   document.querySelector('.next').addEventListener('click', function () {
     slider.goTo('next');
   }); 
-
